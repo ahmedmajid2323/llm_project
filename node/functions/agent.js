@@ -22,8 +22,8 @@ const transporter = nodemailer.createTransport({
   port: 2525,
   secure: false, // true for port 465, false for other ports
   auth: {
-    user: "07c83bf2c2f2f7",
-    pass: "95817a3922ed9d",
+    user: "user_key",
+    pass: "password",
   },
 });
 
@@ -129,7 +129,7 @@ const get_weather_tool = tool(
 
     const param = zone.toLowerCase()
     console.log(param)
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${param}&units=metric&appid=59428b4a9179028128031674233f5a96`);
+    const response = await fetch(`openweathermapAPI`);
     const data = await response.json();
 
     console.log(data)
